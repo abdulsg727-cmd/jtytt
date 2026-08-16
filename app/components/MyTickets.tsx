@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Ticket } from '../lib/types';
 import { Language, translations } from '../translations';
-import { Bus, MapPin, Calendar, Clock, Ticket as TicketIcon, Trash2, ArrowRight, ShieldCheck, AlertCircle } from 'lucide-react';
+import { Bus, MapPin, Calendar, Clock, Ticket as TicketIcon, Trash2, ArrowRight, ShieldCheck, CircleAlert as AlertCircle } from 'lucide-react';
 import { updateTicketStatusInFirestore } from '../lib/firebase';
 
 interface MyTicketsProps {

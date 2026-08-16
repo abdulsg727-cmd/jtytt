@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Language, translations } from '../translations';
-import { Search, Calculator, CheckCircle2, Circle, ArrowRight, Package, Truck, Compass, Check } from 'lucide-react';
+import { Search, Calculator, CircleCheck as CheckCircle2, Circle, ArrowRight, Package, Truck, Compass, Check } from 'lucide-react';
 import { Shipment } from '../lib/types';
 
 interface ShipmentTrackingProps {

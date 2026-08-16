@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { BusTrip, PassengerCount } from '../lib/types';
 import { Language, translations } from '../translations';
-import { Check, Armchair, ChevronRight, AlertCircle } from 'lucide-react';
+import { Check, Armchair, ChevronRight, CircleAlert as AlertCircle } from 'lucide-react';
 import { logVisitorTripSelection } from '../lib/firebase';
 
 interface SeatSelectionProps {
