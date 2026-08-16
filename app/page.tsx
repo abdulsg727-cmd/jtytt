@@ -10,7 +10,7 @@ import {
   Calendar,
   Users,
   Search,
-  Bus,
+  Bus,MapPin ,
   MapPinned,
   Armchair,
   Gift,
@@ -19,7 +19,11 @@ import {
 } from 'lucide-react';
 import { useRouter } from 'next/navigation'
 import { Language, translations } from './translations';
+import Footer from './components/Footer'
+import AuthModal from './components/AuthModal'
+import Navbar from './components/Navbar'
 import VisitorTracker from './components/VisitorTracker'
+import {testConnection} from './lib/firebase'
 export default function HomePage() {
   const router = useRouter();
 

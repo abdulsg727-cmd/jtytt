@@ -15,7 +15,7 @@ import {
   onSnapshot
 } from 'firebase/firestore';
 // User-provided Firebase configuration
-import firebaseConfig from '@/firebase-applet-config.json';
+import firebaseConfig from '../firebase-applet-config.json';
 
 if (!firebaseConfig || !firebaseConfig.projectId) {
   console.error('CRITICAL: Firebase configuration is missing or invalid! Check firebase-applet-config.json');

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useAuth } from '../lib/AuthContext';
 import { Language } from '../translations';
 import { X, Mail, Lock, User as UserIcon, LogIn, UserPlus, AlertCircle, ShieldCheck, ArrowRight, Loader2 } from 'lucide-react';
-import { toast } from 'sonner';
 
 interface AuthModalProps {
   lang: Language;
@@ -26,7 +25,6 @@ export default function AuthModal({ lang }: AuthModalProps) {
     setError(null);
     try {
       await signInWithGoogle();
-      toast.success(isAr ? 'تم تسجيل الدخول بنجاح عبر Google' : 'Signed in with Google successfully');
     } catch (err: any) {
       console.error(err);
       if (err.code === 'auth/popup-closed-by-user') {
@@ -58,10 +56,8 @@ export default function AuthModal({ lang }: AuthModalProps) {
     try {
       if (tab === 'login') {
         await signInWithEmail(email, password);
-        toast.success(isAr ? 'مرحباً بك! تم تسجيل الدخول بنجاح' : 'Welcome back! Signed in successfully');
       } else {
         await signUpWithEmail(email, password, name);
-        toast.success(isAr ? 'تم إنشاء الحساب وتسجيل الدخول بنجاح' : 'Account created and signed in successfully');
       }
     } catch (err: any) {
       console.error(err);
@@ -148,7 +144,6 @@ export default function AuthModal({ lang }: AuthModalProps) {
               <button
                 onClick={async () => {
                   await signOut();
-                  toast.info(isAr ? 'تم تسجيل الخروج بنجاح' : 'Signed out successfully');
                   closeAuthModal();
                 }}
                 className="w-full py-2.5 px-4 bg-red-50 hover:bg-red-100 text-red-600 rounded-xl font-bold text-xs transition-colors cursor-pointer"
