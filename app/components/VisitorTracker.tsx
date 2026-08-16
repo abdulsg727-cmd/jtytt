@@ -6,7 +6,7 @@ import {
   initVisitorSession,
   updateVisitorPage,
   updateVisitorPresence,
-} from '@/lib/firebase';
+} from '../lib/firebase';
 
 type VisitorTrackerProps = {
   language: string;

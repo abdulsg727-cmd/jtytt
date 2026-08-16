@@ -17,7 +17,9 @@ import {
   Zap,
   Leaf
 } from 'lucide-react';
-
+import { useRouter } from 'next/navigation'
+import { Language, translations } from './translations';
+import VisitorTracker from './components/VisitorTracker'
 export default function HomePage() {
   const router = useRouter();
 
