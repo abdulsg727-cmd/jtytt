@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Language, translations } from '../translations';
 import { Search, Calculator, CheckCircle2, Circle, ArrowRight, Package, Truck, Compass, Check } from 'lucide-react';
-import { Shipment } from '../types';
+import { Shipment } from '../lib/types';
 
 interface ShipmentTrackingProps {
   lang: Language;
@@ -137,7 +137,7 @@ export default function ShipmentTracking({ lang }: ShipmentTrackingProps) {
 
                 {/* Timeline display */}
                 <div className="relative pl-6 rtl:pr-6 rtl:pl-0 border-l border-slate-200 rtl:border-r rtl:border-l-0 space-y-6 mt-4">
-                  {activeShipment.timeline.map((step, idx) => {
+                  {activeShipment.timeline?.map((step, idx) => {
                     const isCompleted = step.completed;
                     const isCurrent = activeShipment.status === step.status;
                     return (

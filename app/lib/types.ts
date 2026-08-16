@@ -43,7 +43,7 @@ export interface BusTrip {
   departureTime: string;
   arrivalTime: string;
   duration?: string;
-  price?: number; // in JOD
+  price: number; // in JOD
   priceJOD?: number;
   busType: 'VIP' | 'Regular' | 'Executive' | 'VIP Royal' | 'Executive Class' | 'Regular Standard';
   availableSeats: number;

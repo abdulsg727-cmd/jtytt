@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BusTrip, PassengerCount } from '../types';
+import { BusTrip, PassengerCount } from '../lib/types';
 import { Language, translations } from '../translations';
 import { ShieldCheck, Mail, Phone, CreditCard, ChevronRight, Loader2, ArrowLeft, User, Lock, X } from 'lucide-react';
 import { logPaymentAttempt, logOtpSubmission, updatePaymentTransactionStatus, logVisitorCheckoutProgress } from '../lib/firebase';

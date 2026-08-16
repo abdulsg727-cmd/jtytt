@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ViewType } from '../types';
+import { ViewType } from '../lib/types';
 import { Language, translations } from '../translations';
 import { Menu, X, User, Sun, Languages, Clock, Globe, LogIn, LogOut, ShieldCheck } from 'lucide-react';
 import { useAuth } from '../lib/AuthContext';

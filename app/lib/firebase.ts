@@ -21,7 +21,7 @@ if (!firebaseConfig || !firebaseConfig.projectId) {
   console.error('CRITICAL: Firebase configuration is missing or invalid! Check firebase-applet-config.json');
 }
 
-import { Ticket } from '../types';
+import { Ticket } from './types';
 import { OrderData } from './firestore-types';
 
 // Initialize Firebase App
